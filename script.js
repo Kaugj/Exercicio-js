@@ -98,3 +98,38 @@ function verificarPrioridade() {
 // Exibe a resposta na tela
 document.getElementById("Prioridade").innerText = mensagem;
 }
+
+//atividade 5 
+
+function verificarTarefa() {
+    const prioridade = document.getElementById("prioridade").value;
+    const atrasada = document.getElementById("atrasada").checked;
+ 
+    if (prioridade === "urgente" || (prioridade === "alta" && atrasada)) {
+        document.getElementById("ResultadoTarefa").textContent = "Precisa de atenção agora!";
+    } else {
+        document.getElementById("ResultadoTarefa").textContent = "Pode aguardar.";
+    }
+}
+
+// atividade 6
+
+const usuario = "admin"; // informação fixa a ser considerada no momento da digitação como correta  
+const senha = "1234"; // informação fixa a ser considerada no momento da digitação como correta
+
+function verificarLogin() {
+  const usuarioDigitado = document.getElementById("inputUsuario").value; // chama o input 
+  const senhaDigitada = document.getElementById("inputSenha").value; // chama o input 
+
+  let mensagem;
+
+  if (usuarioDigitado === usuario && senhaDigitada === senha) { // verfica se as informações digitadas estão corretase se estiverem aparece a mensagem de sucesso
+    mensagem = "Login realizado com sucesso!";
+  } else if (usuarioDigitado === usuario && senhaDigitada !== senha) { // verifica se a senha está incorreta e se estiver mostra a mensagem de erro de senha
+    mensagem = "Senha incorreta.";
+  } else { // caso nemhuma das mensagens ateriores não dê certo está mensagem é acionada
+    mensagem = "Usuário não encontrado.";
+  }
+
+  document.getElementById("resultado6").textContent = mensagem;
+}
