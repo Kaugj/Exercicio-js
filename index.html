@@ -55,6 +55,34 @@
     <p id="Prioridade"></p>
   </div>
 
+  <div class="atividade">
+     <h2>Atvidade 5 - Verificação de Prioridade da Tarefa</h2>
+     <label for="prioridade">Prioridade:</label>
+     <select id="prioridade">
+     <option value="baixa">Baixa</option>
+     <option value="media">Média</option>
+     <option value="alta">Alta</option>
+     <option value="urgente">Urgente</option>
+     </select>
+     <br><br>
+     <label for="atrasada">Tarefa atrasada?</label>
+     <input type="checkbox" id="atrasada">
+     <br><br>
+     <button onclick="verificarTarefa()">Verificar Tarefa</button>
+     <p id="ResultadoTarefa"></p>
+  </div>
+
+  <div class="atividade">
+  <h1>Atividade 6 - Login simples</h1>
+  <p>Sistema de login</p>
+
+  <input type="text" id="inputUsuario" placeholder="Usuário">
+  <input type="password" id="inputSenha" placeholder="Senha">
+  <button onclick="verificarLogin()">Entrar</button>
+
+  <p id="resultado6"></p>
+  </div>
+
 <script src="script.js"></script>
 </body>
 </html>
