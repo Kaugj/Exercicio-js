@@ -189,3 +189,33 @@ function calcularDesconto() {
 }
 
 // ATIVIDADE 9 
+
+const tarefa = {
+    titulo: "Estudar JavaScript",
+    concluida: false
+};
+
+function marcarComoConcluida(tarefa) {
+  if (!tarefa) {
+    document.getElementById("resultado9").textContent = "Nenhuma tarefa foi informada!";
+    return;
+  }
+
+  if (tarefa.concluida) {
+    document.getElementById("resultado9").textContent = "Esta tarefa já foi concluída.";
+    atualizarTela();
+    return;
+  }
+
+  tarefa.concluida = true;
+  document.getElementById("resultado9").textContent = "Tarefa concluída com sucesso!";
+  atualizarTela();
+}
+
+// só para mostrar o estado atual do objeto na página
+function atualizarTela() {
+  document.getElementById("tituloTarefa").textContent = tarefa.titulo;
+  document.getElementById("statusTarefa").textContent = tarefa.concluida ? "Concluída" : "Pendente";
+}
+
+atualizarTela(); // roda uma vez ao carregar a página, pra mostrar o estado inicial
